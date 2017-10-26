@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: ideas_app_development
+  database: ideas_app_users_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ideas_app_test
+  database: ideas_app_users_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: ideas_app_production
+  database: ideas_app_users_production
   username: ideas_app
   password: <%= ENV['IDEAS_APP_DATABASE_PASSWORD'] %>
