@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/update'
+
   root to: "ideas#index"
 
   resources :ideas
