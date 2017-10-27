@@ -19,8 +19,8 @@
         <td><%= idea.description %></td>
         <td><%= idea.picture %></td>
         <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_idea_path(idea) if logged_in? %></td>
+        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } if logged_in? %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'New Idea', new_idea_path if logged_in? %>

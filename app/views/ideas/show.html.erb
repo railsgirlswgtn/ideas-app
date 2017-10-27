@@ -15,5 +15,5 @@
   <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Edit', edit_idea_path(@idea) if logged_in? %> |
 <%= link_to 'Back', ideas_path %>
