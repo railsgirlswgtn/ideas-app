@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% if @current_user %>
+    <p>Logged in as <b><%= @current_user.username %></b> | <a href="/logout">Log out</a></p>
+    <% else %>
+    <p><a href="/users/new">Sign up</a> | <a href="/login">Log in</a></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
