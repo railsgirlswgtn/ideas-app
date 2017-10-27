@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     if @user = User.find_by(params.require(:user).permit(:username))
       # login hack
-      if @user.password == params[:user][:password]
+      if @user.password == Digest::SHA256.hexdigest(params[:user][:password])
         session[:current_user_id] = @user.id
         redirect_to root_path
         return

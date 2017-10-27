@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:username, :password))
+    @user = User.new(params.require(:user).permit(:username))
+    @user.password = Digest::SHA256.hexdigest(params[:user][:password])
 
     if @user.save
       redirect_to root_path, notice: 'User was successfully created.'
