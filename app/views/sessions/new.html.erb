@@ -1,3 +1,9 @@
 <h1>Log in</h1>
 
+<% if flash[:error] %>
+<div id="error_explanation">
+  <%= flash[:error] %>
+</div>
+<% end %>
+
 <%= render 'users/form', user: @user, url: '/login' %>
