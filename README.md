@@ -50,7 +50,7 @@ which you can pour your beautiful code and internet schemes).
 To clone the repository, in your Terminal (Windows folks: use your Command Prompt), run
 the following command (substituting in your GitHub username):
 
-    $ git clone https://github.com/\<GitHub username\>/ideas-app
+    $ git clone https://github.com/<GitHub username>/ideas-app
 
 > Tip: You don't need to type the "$" symbol into your prompt. It just signifies
 > the beginning of a command that needs to be typed in.
