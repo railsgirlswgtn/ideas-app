@@ -173,3 +173,20 @@ To run the suite of automated tests, run:
 
     $ bundle exec rspec
 
+#### Deploying
+
+To deploy your app to Heroku, you will need to follow the instructions here:
+[Heroku deployment guide][heroku-setup].
+
+[heroku-setup]: https://devcenter.heroku.com/articles/getting-started-with-rails5
+
+If you run into trouble with Heroku commands not working on a Windows machine,
+please try these steps:
+
+* Close and restart your Command Prompt. This should load in new commands.
+* If the step above does not fix your troubles, make sure you have your
+ Heroku installation path (where the program lives on your computer) in your
+ $PATH (system variable).
+ You can do this by following [these instructions][windows-path-instructions].
+
+ [windows-path-instructions]: https://www.computerhope.com/issues/ch000549.htm
