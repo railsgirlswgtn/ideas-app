@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @idea.name %>
@@ -14,6 +12,22 @@
   <strong>Picture:</strong>
   <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 </p>
-
+<h3>Comments </h3>
+<h2>Add a comment:</h2>
+<%= form_with(model: [@idea, @idea.comments.build]) do |form| %>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<% @idea.comments.each do |comment| %>
+  <p>
+    <%= comment.description %>
+    <% #= link_to 'Destroy', [@idea, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

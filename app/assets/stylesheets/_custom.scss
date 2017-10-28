@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Pacifico');
+$font-family-sans-serif: Karla; 
+
+$primary: #a17cdb;
+
+body h1 {
+	font-family: Pacifico;
+}
+
+.new_user h1,
+.new_user h3 {
+	text-align: center;
+}
