@@ -9,6 +9,13 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 
+gem 'sprockets', '>= 3.7.2'
+gem 'loofah', '>= 2.2.1'
+gem 'rails-html-sanitizer', '>= 1.0.4'
+gem 'nokogiri', '>= 1.8.2'
+gem 'ffi', '>= 1.9.24'
+gem 'rubyzip', '>= 1.2.2'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18', group: :production
 gem 'sqlite3', group: [:development, :test]
@@ -61,4 +68,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby "2.3.7"
+ruby '2.3.7'
