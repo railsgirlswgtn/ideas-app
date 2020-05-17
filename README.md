@@ -4,8 +4,10 @@ Finished app made by following http://guides.railsgirls.com/app
 
 ## Setup
 
-First of all, make sure you have ruby and rails available. Check out [the
-rails girls install guide][rg-install] for information on how to get set up.
+First of all, make sure you have Ruby (programming language) and Ruby on Rails
+(web application framework) available.
+Check out [the rails girls install guide][rg-install] for information on
+how to get set up.
 
 [rg-install]: http://guides.railsgirls.com/install
 
@@ -14,29 +16,46 @@ rails girls install guide][rg-install] for information on how to get set up.
 Let's get you your very own copy of the project, so you can keep your changes
 safe and stored somewhere.
 
-If you're not already viewing this on the rails girls GitHub page, visit
+If you're not already viewing this on the Rails Girls GitHub page, visit
 https://github.com/railsgirlswgtn/ideas-app in your browser.
 
 Up in the top right hand corner of the page, you'll see a "Fork" button - go
 ahead and click that (you'll need to be signed in to GitHub).
 
 After that's done its thing, you should have your very own copy of the ideas
-app on your GitHub profile - yay open source 🎉
+app on your GitHub profile - yay Open Source 🎉
 
 ### Getting the code
 
 Now that you've got your own copy, it's time to get it on to your computer.
 
 We're going to do something called "cloning" - which means getting a copy of
-the repository (this thing your forked is called a repository - a bucket into
+the repository (this thing you forked is called a "repository" - a bucket into
 which you can pour your beautiful code and internet schemes).
 
-To clone the repository, in your terminal (Windows folks: use "git bash"), run
-the following command (substituting in your github username):
+> Tip: You might need to check that you have Git (the version control system)
+> installed on your machine before this will work.
+> Type `git --version"` into your Terminal application (if on a Mac) prompt,
+> or into your Command Prompt program (if on a Windows computer).
 
-    $ git clone https://github.com/\<github username\>/ideas-app
+> If you get a number as a response (something looking like "git version 2.6.4"),
+> you have Git installed on your machine.
+> If you get a message similar to:
+> "'git' is not recognized as an internal or external command, operable program or batch file."
+> You do not have Git installed, and should follow the instructions in the
+> [Git install guide][git-install]
 
-This is telling git, the thing which manages the repository, to go off and see
+[git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+To clone the repository, in your Terminal (Windows folks: use your Command Prompt), run
+the following command (substituting in your GitHub username):
+
+    $ git clone https://github.com/<GitHub username>/ideas-app
+
+> Tip: You don't need to type the "$" symbol into your prompt. It just signifies
+> the beginning of a command that needs to be typed in.
+
+This is telling Git, the thing which manages the repository, to go off and see
 what's at that URL and if it looks about right then download it to your
 machine.
 
@@ -48,11 +67,14 @@ following command:
 
     $ cd ideas-app
 
-> heads up and/or pro tip: if you ever want to figure out where on your
-> computer you are when you're using this terminal, you can type `pwd` (print
+> Tip: if you ever want to figure out where on your
+> computer you are when you're using this Terminal, you can type `pwd` (print
 > working directory) and it will tell you the path to the current directory.
 > Then if you need to, you can find it with the visual file browser or some
-> other program, like a text editor. Handy.
+> other program, like a text editor.
+> If you are on a Windows computer, you should see the path at the
+> start of your command prompt without any extra steps.
+> Handy.
 
 ### Setting up the app
 
@@ -65,8 +87,9 @@ usual routine of setting up rails apps.
 
 #### Installing the gems
 
-First of all, let's make sure all of the gems are installed (gems are projects
-that other people have written and uploaded to the ruby "app store" - rubygems)
+First of all, let's make sure all of the gems are installed ("gems" are projects
+that other people have written and uploaded to the Ruby "app store" - [RubyGems][ruby-gems-site])
+[ruby-gems-site]: https://rubygems.org/
 
     $ bundle install
 
@@ -77,7 +100,7 @@ that other people have written and uploaded to the ruby "app store" - rubygems)
 
 > If you see a different error related to `pg`, grab a coach and they can help
 > out. This is pretty common, but it's a lengthy explanation so it might take
-> up the whole readme
+> up the whole ReadMe
 
 #### Setting up the database
 
@@ -88,7 +111,7 @@ database on your computer.
 > it during the weekend (but by all means ask questions in the mean time if
 > you're interested!)
 
-We'll start by creating it. Run this in your terminal:
+We'll start by creating it. Run this in your Terminal:
 
     $ bundle exec rails db:create
 
@@ -150,3 +173,20 @@ To run the suite of automated tests, run:
 
     $ bundle exec rspec
 
+#### Deploying
+
+To deploy your app to Heroku, you will need to follow the instructions here:
+[Heroku deployment guide][heroku-setup].
+
+[heroku-setup]: https://devcenter.heroku.com/articles/getting-started-with-rails5
+
+If you run into trouble with Heroku commands not working on a Windows machine,
+please try these steps:
+
+* Close and restart your Command Prompt. This should load in new commands.
+* If the step above does not fix your troubles, make sure you have your
+ Heroku installation path (where the program lives on your computer) in your
+ $PATH (system variable).
+ You can do this by following [these instructions][windows-path-instructions].
+
+ [windows-path-instructions]: https://www.computerhope.com/issues/ch000549.htm
